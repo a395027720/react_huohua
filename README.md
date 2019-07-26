@@ -9,7 +9,8 @@ npm start
 ```
 
 ## 介绍
-使用create-react-app创建项目
+火花网真实项目
+使用create-react-app脚手架创建项目
 
 ### 技术栈
 - react-router-dom
