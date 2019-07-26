@@ -6,11 +6,9 @@ export default class Common extends Component {
   render() {
     return (
       <div className="common">
-        <div className="common-center">
-          <Header />
+        <Header />
           {this.props.children}
           <Footer />
-        </div>
       </div>
     );
   }

@@ -4,7 +4,10 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        123
+        <div className="header-center w">
+          123
+        </div>
+        
       </div>
     )
   }
