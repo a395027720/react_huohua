@@ -1,6 +1,6 @@
 import React,{Component} from "react";
-import "./styles/common.css";
-
+import "styles/common.css";
+import "styles/reset.css"
 export default class App extends Component {
   componentDidMount() {
     
@@ -8,10 +8,9 @@ export default class App extends Component {
   render(){
     return (
       <div className="container">
-        123
+        {this.props.children}
       </div>
     );
   }
 }
 
-export default App;
