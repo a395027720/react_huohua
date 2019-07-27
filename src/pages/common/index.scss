@@ -42,32 +42,35 @@
 
       .dhzx {
         background-color: #ffb51a;
+        position: relative;
+        width: 300px;
+        margin-right: -156px;
       }
 
       .dhzx-enter {
-        width: 144px;
+        margin-right: -156px;
       }
 
       .dhzx-enter-active {
-        width: 300px;
-        transition: width 500ms;
+        margin-right:0;
+        transition: all 500ms;
       }
 
       .dhzx-enter-done {
-        width: 300px;
+        margin-right:0;
       }
 
       .dhzx-exit {
-        width: 300px;
+        margin-right:0;
       }
 
       .dhzx-exit-active {
-        width: 144px;
-        transition: width 500ms;
+        margin-right: -156px;
+        transition: all 500ms;
       }
 
       .dhzx-exit-done {
-        width: 144px;
+        margin-right: -156px;
       }
     }
   }
