@@ -1,9 +1,15 @@
-import React, { Component } from "react";
-import {Link} from "react-router-dom"
-import Header from "@/components/header";
+import { CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
+import React, { Component } from "react";
+
 import "./index.scss";
+
 export default class Common extends Component {
+  state = {
+    dhzxShow: false
+  };
   render() {
     return (
       <div className="common">
@@ -24,13 +30,37 @@ export default class Common extends Component {
               </Link>
             </li>
             <li>
-              <Link to="/" className="dhzx" href="#">
-                <i className="iconfont">&#xe6f4;</i>电话咨询
-              </Link>
+              <CSSTransition
+                in={this.state.dhzxShow}
+                timeout={500}
+                classNames="dhzx"
+              >
+                <Link
+                  to="/"
+                  className="dhzx"
+                  href="#"
+                  onMouseEnter={this.handleMouseEnter.bind(this)}
+                  onMouseLeave={this.handleMouseLeave.bind(this)}
+                >
+                  <i className="iconfont">&#xe6f4;</i>电话咨询
+                </Link>
+              </CSSTransition>
             </li>
           </ul>
         </div>
       </div>
     );
+  }
+
+  handleMouseEnter() {
+    if(this.state.dhzxShow) return;
+    this.setState({
+      dhzxShow: true
+    });
+  }
+  handleMouseLeave(){
+    this.setState({
+      dhzxShow: false
+    });
   }
 }
