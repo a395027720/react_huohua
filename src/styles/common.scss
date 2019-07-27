@@ -1,0 +1,128 @@
+@import "styles/default.scss";
+
+.w {
+  width: 1080px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.mline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.sline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*  center-vertical-row加到bootstrap的Row上 
+    center-vertical-col加到bootstrap的Col上
+    使列垂直居中
+*/
+.center-vertical-row {
+  font-size: 0;
+}
+
+.center-vertical-col {
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* flex */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-fill {
+  flex: auto;
+}
+
+@for $i from 1 through 12 {
+  .flex-#{$i} {
+    flex: 0 0 ($i * 8.33333%);
+    max-width: ($i * 8.33333%);
+  }
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}

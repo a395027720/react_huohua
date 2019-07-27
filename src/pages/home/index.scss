@@ -1,6 +1,87 @@
-.home{
-  .home-banner{
-    height: 640px;
-    background-color: orange;
+@import "styles/default.scss";
+
+.home {
+  .swiper {
+  
+    .slider-item {
+      height: 640px;
+      
+      .w {
+        padding-top: 153px;
+        padding: 153px 80px 0 80px;
+        box-sizing: border-box;
+        color: #fff;
+
+        h2 {
+          font-size: 52px;
+          height: 80px;
+          line-height: 80px;
+        }
+
+        .left {
+          .subtitle {
+            font-weight: 700;
+          }
+
+          .desc {
+            line-height: 22px;
+            margin-top: 5px;
+          }
+
+          .btns {
+            margin-top: 50px;
+
+            & a {
+              width: 164px;
+              height: 45px;
+              line-height: 45px;
+              display: inline-block;
+              text-align: center;
+              border-radius: 23px;
+              color: #fff;
+              font-size: 18px;
+            }
+
+            .mfst {
+              background-color: #fff;
+              color: $color-theme-red;
+            }
+
+            .ljwm {
+              margin-left: 30px;
+              border: 1px solid #fff;
+            }
+          }
+        }
+
+        .right {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .live-lesson {
+      background-color: $color-theme-red;
+    }
+
+    .huohua-ai {
+      background: url(https://asset.txqn.huohua.cn/image/803e2e53-6b2b-4833-8b0f-3959cb97a621.jpg)
+        no-repeat top;
+      background-size: auto 100%;
+  
+      .mfst {
+        background-color: $color-theme-red !important;
+        color: #fff !important;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 44px;
+      height: 7px;
+      background-color: #fff;
+      border-radius: 4px;
+    }
   }
 }

@@ -1,11 +1,69 @@
-.header{
+@import "styles/default.scss";
+
+.header {
   height: 86px;
-  background-color: red;
+  z-index: 999;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
-  .header-center{
+
+  .w {
     height: 100%;
+    display: flex;
+
+    .logo {
+      display: block;
+      width: 135px;
+      height: 40px;
+      background: url(../../assets/images/logo.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .navi {
+      li {
+        position: relative;
+
+        a {
+          display: block;
+          height: 50px;
+          line-height: 50px;
+          padding: 0 20px;
+          color: white;
+          font-size: 16px;
+        }
+
+        i {
+          display: block;
+          height: 3px;
+          width: 32px;
+          background-color: transparent;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+
+          &.active {
+            background-color: #fff;
+          }
+        }
+
+
+      }
+    }
+
+    .login {
+      .btn {
+        display: block;
+        width: 92px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+        color: $color-theme-red;
+        background-color: #fff;
+        border-radius: 16px;
+      }
+    }
   }
 }
