@@ -1,0 +1,28 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid blue;
+}
+.list li {
+  height: 500px;
+  border-bottom: 1px solid green;
+}
+.list li p {
+  opacity: 0;
+  animation: move 1s forwards;
+  animation-play-state: paused;
+}
+.list .move p {
+  animation-play-state: running;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+    margin-left: 500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}

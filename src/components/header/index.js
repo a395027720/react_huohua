@@ -1,5 +1,6 @@
-import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import React, { Component } from "react";
+
 import "./index.scss";
 
 export default class Header extends Component {
@@ -7,11 +8,19 @@ export default class Header extends Component {
     super(props);
   }
   state = {
-    activeTab: 0
+    activeTab: 0,
+    isFixed: false
   };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleWindowScroll.bind(this));
+  }
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleWindowScroll.bind(this));
+  }
   render() {
     return (
-      <div className="header ">
+      <div className={`header ${this.state.isFixed ? "fix-navi" : ""}`}>
         <div className="w flex-row">
           <div className="flex-2 flex-row align-items-center">
             <a className="logo" href="/" />
@@ -44,6 +53,16 @@ export default class Header extends Component {
     this.setState({
       activeTab: index
     });
+  }
+
+  handleWindowScroll() {
+    const top = document.documentElement.scrollTop;
+    //控制元素块A随鼠标滚动固定在顶部
+    if (top >= 640) {
+      this.setState({ isFixed: true });
+    } else if (top < 640) {
+      this.setState({ isFixed: false });
+    }
   }
 }
 

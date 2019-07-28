@@ -62,6 +62,9 @@ export default class Home extends Component {
             </div>
           </Swiper>
         </div>
+        <div className="two">
+
+        </div>
       </div>
     );
   }

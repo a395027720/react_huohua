@@ -8,8 +8,9 @@ import "./index.scss";
 
 export default class Common extends Component {
   state = {
-    dhzxShow: false
+    dhzxShow: false,
   };
+
   render() {
     return (
       <div className="common">
@@ -42,7 +43,8 @@ export default class Common extends Component {
                   onMouseEnter={this.handleMouseEnter.bind(this)}
                   onMouseLeave={this.handleMouseLeave.bind(this)}
                 >
-                  <i className="iconfont">&#xe6f4;</i>电话咨询&nbsp; &nbsp;10109909
+                  <i className="iconfont">&#xe6f4;</i>电话咨询&nbsp;
+                  &nbsp;10109909
                 </Link>
               </CSSTransition>
             </li>
@@ -53,14 +55,16 @@ export default class Common extends Component {
   }
 
   handleMouseEnter() {
-    if(this.state.dhzxShow) return;
+    if (this.state.dhzxShow) return;
     this.setState({
       dhzxShow: true
     });
   }
-  handleMouseLeave(){
+  handleMouseLeave() {
     this.setState({
       dhzxShow: false
     });
   }
+
+  
 }
