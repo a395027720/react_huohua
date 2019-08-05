@@ -264,54 +264,60 @@
       }
     }
     .bihuan-process {
-      margin: 50px 30px;
+      margin: 100px 30px;
       .process {
         width: 100%;
         height: 5px;
-        background:linear-gradient(to right,#ffc003,#ff4753);
+        background: linear-gradient(to right, #ffc003, #ff4753);
         border-radius: 5px;
         position: relative;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         li{
-          display: block;
-          width: 20px;
-          height: 20px;
-          background-color: #ffc003;
-          border: 5px solid #fff;
-          border-radius: 50%;
-          box-shadow: 5px 5px 10px rgba(255,105,120,.36);
-          &:not(:first-child){
-            margin-left: 95px;
+          flex:auto;
+          position: relative;
+          text-align: center;
+          padding-top: 50px;
+          &::after {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: #ffc003;
+            border: 6px solid #fff;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px rgba(255, 105, 120, 0.36);
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '',
           }
         }
-        
       }
     }
   }
-  .home-dynamic{
-    height: 200px;
-    .w{
+  .home-dynamic {
+    padding-bottom: 50px;
+    .w {
       position: relative;
-      .swiper-container{
+      .swiper-container {
         margin: 0 100px;
       }
-      .slider-item{
+      .slider-item {
         width: 245px;
-        height: 175px;
-        border-radius: 10px;
         overflow: hidden;
-        img{
+        img {
           width: 100%;
-          height: 100%;
+          border-radius: 10px;
+        }
+        p {
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
         }
       }
-      .swiper-button-prev{
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        transform: translateY(-50%);
-      }
+      
     }
   }
 }

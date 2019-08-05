@@ -198,15 +198,27 @@ export default class Home extends Component {
             </div>
             <div className="bihuan-process">
               <ul className="process flex-row">
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
-                <li />
+                <li>入学测评</li>
+                <li>入门课</li>
+                <li>课堂学习</li>
+                <li>
+                  《火花秘籍》
+                  <br />
+                  《计算锦囊》
+                </li>
+                <li>个性化补充题</li>
+                <li>专题测评</li>
+                <li>
+                  数理思维
+                  <br />
+                  趣味挑战
+                </li>
+                <li>年度测评</li>
+                <li>
+                  个性化
+                  <br />
+                  短期班
+                </li>
               </ul>
             </div>
           </div>
@@ -217,23 +229,26 @@ export default class Home extends Component {
               getSwiper={swiper => (this.swiper = swiper)}
               {...homeDynamicParams}
             >
-              <div className="slider-item">
+              <div className="slider-item flex-column">
                 <img
                   src="https://asset.txqn.huohua.cn/assets/3c5f5489-189f-41b0-961f-776393993304.png"
                   alt=""
                 />
+                <p>文字</p>
               </div>
-              <div className="slider-item">
+              <div className="slider-item flex-column">
                 <img
                   src="https://asset.txqn.huohua.cn/assets/3c5f5489-189f-41b0-961f-776393993304.png"
                   alt=""
                 />
+                <p>文字</p>
               </div>
-              <div className="slider-item">
+              <div className="slider-item flex-column">
                 <img
                   src="https://asset.txqn.huohua.cn/assets/3c5f5489-189f-41b0-961f-776393993304.png"
                   alt=""
                 />
+                <p>文字</p>
               </div>
             </Swiper>
             <div className="swiper-button-next" onClick={this.goNext} />

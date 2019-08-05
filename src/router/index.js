@@ -7,7 +7,7 @@ import Home from "@/pages/home";
 import Nomatch from "@/pages/nomatch";
 import Course from "@/pages/course"
 
-export default class Rouer extends Component {
+export default class Router extends Component {
   render() {
     return (
       <BrowserRouter>
