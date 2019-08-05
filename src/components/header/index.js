@@ -14,6 +14,10 @@ export default class Header extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleWindowScroll.bind(this));
+    let activeTab = tabs.findIndex(
+      item => item.path === window.location.pathname
+    );
+    this.setState({ activeTab });
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleWindowScroll.bind(this));
@@ -69,11 +73,11 @@ export default class Header extends Component {
 const tabs = [
   {
     title: "首页",
-    path: "/"
+    path: "/home"
   },
   {
     title: "课程体系",
-    path: "/system"
+    path: "/course"
   },
   {
     title: "AI课",

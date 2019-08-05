@@ -1,0 +1,44 @@
+.footer {
+  background-color: #3c3c3c;
+  color: #fff;
+  font-size: 16px;
+  padding: 50px 0 0 0;
+  .footer-left {
+    ul {
+      li {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  .footer-center {
+    .zhaopin,
+    .hezuo {
+      margin-top: 10px;
+      span {
+        display: inline-block;
+        background-color: #2f2f2f;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-radius: 20px;
+      }
+    }
+    
+  }
+  .footer-right{
+    .code-img{
+      width: 258px;
+      height: 258px;
+      margin-top: 20px;
+    }
+    
+  }
+  .footer-bottom{
+    font-size: 13px;
+    line-height: 25px;
+    background-color: #2f2f2f;
+    padding: 30px 0 30px 0;
+    color: #cdcdcd;
+  }
+}

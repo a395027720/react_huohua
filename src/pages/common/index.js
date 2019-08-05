@@ -11,6 +11,9 @@ export default class Common extends Component {
     dhzxShow: false,
   };
 
+ 
+  
+
   render() {
     return (
       <div className="common">

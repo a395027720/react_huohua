@@ -1,11 +1,10 @@
 @import "styles/default.scss";
 
 .home {
-  .swiper {
-  
+  background: #f9fafc;
+  .home-swiper {
     .slider-item {
       height: 640px;
-      
       .w {
         padding-top: 153px;
         padding: 153px 80px 0 80px;
@@ -70,7 +69,7 @@
       background: url(https://asset.txqn.huohua.cn/image/803e2e53-6b2b-4833-8b0f-3959cb97a621.jpg)
         no-repeat top;
       background-size: auto 100%;
-  
+
       .mfst {
         background-color: $color-theme-red !important;
         color: #fff !important;
@@ -84,8 +83,235 @@
       border-radius: 4px;
     }
   }
-  .two{
-    height: 640px;
-    background-color: red;
+
+  .youshi-title,
+  .bihuan-title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 550;
+    color: #4a4a4a;
+    margin-top: 100px;
+  }
+  .youshi-subtitle,
+  .bihuan-subtitle {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    font-size: 24px;
+    padding: 20px 0 50px 0;
+  }
+  .home-youshi {
+    .youshi-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .list-item {
+        text-align: center;
+        background-color: #fff;
+        margin: 15px;
+        border-radius: 20px;
+        &:hover {
+          box-shadow: 0 5px 45px rgba(29, 29, 29, 0.1);
+          transition: all 0.6s;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+        p {
+          height: 60px;
+          line-height: 60px;
+          color: #666;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .home-bihuan {
+    .bihuan-content {
+      .content-left {
+        border-radius: 10px;
+        overflow: hidden;
+
+        .left-item {
+          height: 120px;
+          color: #fff;
+          line-height: 120px;
+          text-align: center;
+          position: relative;
+          &:not(:first-child) {
+            border-top: 4px solid #fff;
+          }
+
+          p {
+            font-size: 18px;
+          }
+          span {
+            font-size: 24px;
+          }
+        }
+
+        @mixin aftercontent($color) {
+          &::after {
+            content: "";
+            background-color: $color;
+            position: absolute;
+            bottom: -32px;
+            z-index: 99;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            transform: rotate(45deg);
+            transform-origin: top center;
+            border-right-width: 4px;
+            border-right-color: #fff;
+            border-right-style: solid;
+            border-bottom-width: 4px;
+            border-bottom-color: #fff;
+            border-bottom-style: solid;
+          }
+        }
+
+        .one {
+          @include aftercontent(#ffc200);
+          background-color: #ffc200;
+        }
+        .two {
+          @include aftercontent(#ffa241);
+          background-color: #ffa241;
+        }
+        .three {
+          @include aftercontent(#ff6f4c);
+          background-color: #ff6f4c;
+        }
+        .four {
+          background-color: #ff4355;
+        }
+      }
+      .content-right {
+        .one {
+          .item {
+            width: 25%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background-color: #f4f4f4;
+            border-left: 5px solid #fff;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 24px;
+            color: #666;
+            position: relative;
+            &:not(:first-child) {
+              border-bottom: 4px solid #fff;
+            }
+            &:first-child {
+              background-color: #ededed;
+              ::after {
+                content: "";
+                display: block;
+                width: 175px+20px;
+                height: 10px;
+                background-color: #ededed;
+                position: absolute;
+                bottom: -4px;
+                right: -20px;
+              }
+            }
+            &:nth-child(2) {
+              border-bottom-left-radius: 15px;
+            }
+          }
+        }
+        .two,
+        .three,
+        .four {
+          width: 100%;
+          background-color: #ededed;
+          height: 125px;
+          line-height: 125px;
+          border-left: 5px solid #fff;
+          font-size: 20px;
+          color: #666;
+          padding-left: 30px;
+          box-sizing: border-box;
+          i {
+            display: block;
+            width: 37px;
+            height: 12px;
+            background: url(../../static/images/right-arrow.png) no-repeat;
+            background-size: 37px 12px;
+            margin: 0 10px;
+          }
+        }
+        .two {
+          height: 145px;
+        }
+        .two,
+        .three {
+          border-bottom: 5px solid #fff;
+        }
+        .four {
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          height: 120px;
+        }
+      }
+    }
+    .bihuan-process {
+      margin: 50px 30px;
+      .process {
+        width: 100%;
+        height: 5px;
+        background:linear-gradient(to right,#ffc003,#ff4753);
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        li{
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-color: #ffc003;
+          border: 5px solid #fff;
+          border-radius: 50%;
+          box-shadow: 5px 5px 10px rgba(255,105,120,.36);
+          &:not(:first-child){
+            margin-left: 95px;
+          }
+        }
+        
+      }
+    }
+  }
+  .home-dynamic{
+    height: 200px;
+    .w{
+      position: relative;
+      .swiper-container{
+        margin: 0 100px;
+      }
+      .slider-item{
+        width: 245px;
+        height: 175px;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .swiper-button-prev{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+      }
+    }
   }
 }

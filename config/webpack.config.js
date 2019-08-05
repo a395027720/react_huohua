@@ -274,7 +274,8 @@ module.exports = function(webpackEnv) {
         'react-native': 'react-native-web',
         '@': paths.appSrc,
         'utils':paths.utilsPath,
-        'styles':paths.stylesPath
+        'styles':paths.stylesPath,
+        'images':paths.imagesPath
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

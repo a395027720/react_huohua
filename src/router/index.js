@@ -5,6 +5,8 @@ import Login from "@/pages/login";
 import Common from "@/pages/common";
 import Home from "@/pages/home";
 import Nomatch from "@/pages/nomatch";
+import Course from "@/pages/course"
+
 export default class Rouer extends Component {
   render() {
     return (
@@ -18,6 +20,7 @@ export default class Rouer extends Component {
                 <Common>
                   <Switch>
                     <Route path="/home" component={Home} />
+                    <Route path="/course" component={Course} />
                     <Redirect to="/home" />
                     <Route component={Nomatch} />
                   </Switch>

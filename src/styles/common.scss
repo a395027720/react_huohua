@@ -1,10 +1,14 @@
 @import "styles/default.scss";
 
+body {
+  font: 14px/1.5 Hiragino Sans GB, Microsoft YaHei, \\5fae\8f6f\96c5\9ed1, arial,
+    \5b8b\4f53, sans-serif;
+}
+
 .w {
   width: 1080px;
   height: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .fl {

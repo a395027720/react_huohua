@@ -1,0 +1,12 @@
+.course{
+  position: relative;
+  
+  background-color: red;
+  .banner-image{
+    width: 100%;
+    height: 416px;
+    background: url(https://asset.txqn.huohua.cn/image/113ae1e6-3ac6-44cb-8157-b424558b05f5.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
